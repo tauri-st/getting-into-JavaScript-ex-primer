@@ -1,4 +1,9 @@
 // TODO: define addFavoriteBook(..) function
+function addFavoriteBooks(bookName) {
+  if (!bookName.includes("Great")) {
+    favoriteBooks.push(bookName);
+  }
+}
 
 // TODO: define printFavoriteBooks() function
 
