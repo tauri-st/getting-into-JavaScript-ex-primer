@@ -17,7 +17,13 @@ do {
 } while (bank_account >= PHONE_PRICE);
 console.log(bank_account);
 
-//Total Price of Phone Purchase
+//Buy accessory so long as it is less than spending limit
+if (ACCESSORY_PRICE <= SPENDING_LIMIT) {
+  purchase += ACCESSORY_PRICE;
+}
+
+//Calculate Price of Phone Purchase with Tax
+
 
 /* for (i = 0; purchase < bank_account; i++) {
     purchase = bank_account + ACCESSORY_PRICE;
