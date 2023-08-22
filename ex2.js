@@ -25,10 +25,12 @@ if (ACCESSORY_PRICE <= SPENDING_LIMIT) {
 
 //Calculate Price of Phone Purchase with Tax
 purchase += PHONE_PRICE * phoneCount;
-var taxForPurchase = purchase * TAX;
-purchase += taxForPurchase;
+function calculateTax(purchase) {
+  return purchase * TAX;
+}
 
 //Properly format total purchase amount
+purchase = purchase + calculateTax(purchase);
 console.log(`Purchase total is: $${purchase.toFixed(2)}`);
 
 //Can you afford this purchase?
