@@ -28,7 +28,8 @@ purchase += PHONE_PRICE * phoneCount;
 var taxForPurchase = purchase * TAX;
 purchase += taxForPurchase;
 
-console.log(purchase);
+//Properly format total purchase amount
+console.log(`$${purchase.toFixed(2)}`);
 
 /* function addTax(purchase, TAX) {
   var taxForPurchase = purchase * TAX;
