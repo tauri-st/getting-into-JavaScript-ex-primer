@@ -9,20 +9,16 @@ const SPENDING_LIMIT = 200;
 
 //Declare a variable to hold final purchase amount
 var purchase = 0;
-var phoneCount = 0;
 
 do {
-  bank_account -= PHONE_PRICE;
-  phoneCount += 1;
-} while (bank_account >= PHONE_PRICE);
-
-//Buy accessory so long as it is less than spending limit
-if (ACCESSORY_PRICE <= SPENDING_LIMIT) {
-  purchase += ACCESSORY_PRICE;
-}
+  purchase += PHONE_PRICE
+  //Buy accessory so long as it is less than spending limit
+  if (ACCESSORY_PRICE < SPENDING_LIMIT) {
+    purchase += ACCESSORY_PRICE
+  }
+} while (bank_account > purchase);
 
 //Calculate Price of Phone Purchase with Tax
-purchase += PHONE_PRICE * phoneCount;
 function calculateTax(purchase) {
   return purchase * TAX;
 }
