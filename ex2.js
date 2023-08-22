@@ -29,7 +29,14 @@ var taxForPurchase = purchase * TAX;
 purchase += taxForPurchase;
 
 //Properly format total purchase amount
-console.log(`$${purchase.toFixed(2)}`);
+console.log(`Purchase total is: $${purchase.toFixed(2)}`);
+
+//Can you afford this purchase?
+if (purchase > bank_account) {
+  console.log("You can't afford this!");
+} else {
+  console.log("YOLO, go for it!");
+}
 
 /* function addTax(purchase, TAX) {
   var taxForPurchase = purchase * TAX;
