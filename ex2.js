@@ -9,13 +9,14 @@ const SPENDING_LIMIT = 200;
 
 //Declare a variable to hold final purchase amount
 var purchase = 0;
+var phoneCount = 0;
 
-/* Function to subtract money per phone purchase in a loop 
-until bank account money runs out */
 do {
   bank_account -= PHONE_PRICE;
+  phoneCount += 1;
 } while (bank_account >= PHONE_PRICE);
-console.log(bank_account);
+//console.log(bank_account);
+//console.log(phoneCount);
 
 //Buy accessory so long as it is less than spending limit
 if (ACCESSORY_PRICE <= SPENDING_LIMIT) {
@@ -24,7 +25,27 @@ if (ACCESSORY_PRICE <= SPENDING_LIMIT) {
 
 //Calculate Price of Phone Purchase with Tax
 
-
-/* for (i = 0; purchase < bank_account; i++) {
+/* for (i = 0; PHONE_PRICE <= bank_account; i++) {
     purchase = bank_account + ACCESSORY_PRICE;
-    console.log(purchase); */
+    console.log(purchase); 
+}*/
+
+/* Function to subtract money per phone purchase in a loop 
+until bank account money runs out */
+
+/* function phone_purchase (PHONE_PRICE, purchase, phoneCount) {
+  for (i = 0; PHONE_PRICE <= bank_account; i++) {
+    bank_account -= PHONE_PRICE;
+    var phoneCount = console.log([i]);
+  }
+  purchase = phoneCount*PHONE_PRICE
+  console.log(purchase);
+}
+
+for (i = 0; PHONE_PRICE <= bank_account; i++) {
+  bank_account -= PHONE_PRICE;
+  function phone_purchase(PHONE_PRICE) {
+    purchase = [i]*PHONE_PRICE
+    console.log(purchase);
+  }
+} */
