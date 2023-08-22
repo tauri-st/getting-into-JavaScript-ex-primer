@@ -24,6 +24,18 @@ if (ACCESSORY_PRICE <= SPENDING_LIMIT) {
 }
 
 //Calculate Price of Phone Purchase with Tax
+purchase += PHONE_PRICE * phoneCount;
+var taxForPurchase = purchase * TAX;
+purchase += taxForPurchase;
+
+console.log(purchase);
+
+/* function addTax(purchase, TAX) {
+  var taxForPurchase = purchase * TAX;
+  purchase += taxForPurchase;
+}
+addTax(purchase, TAX);
+console.log(purchase); */
 
 /* for (i = 0; PHONE_PRICE <= bank_account; i++) {
     purchase = bank_account + ACCESSORY_PRICE;
