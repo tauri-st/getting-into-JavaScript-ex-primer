@@ -15,8 +15,6 @@ do {
   bank_account -= PHONE_PRICE;
   phoneCount += 1;
 } while (bank_account >= PHONE_PRICE);
-//console.log(bank_account);
-//console.log(phoneCount);
 
 //Buy accessory so long as it is less than spending limit
 if (ACCESSORY_PRICE <= SPENDING_LIMIT) {
@@ -31,7 +29,10 @@ function calculateTax(purchase) {
 
 //Properly format total purchase amount
 purchase = purchase + calculateTax(purchase);
-console.log(`Purchase total is: $${purchase.toFixed(2)}`);
+function formatToPrice(purchase) {
+  return "$" + purchase.toFixed(2);
+}
+console.log("Purchase total is: " + formatToPrice(purchase));
 
 //Can you afford this purchase?
 if (purchase > bank_account) {
